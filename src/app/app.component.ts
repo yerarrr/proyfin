@@ -5,13 +5,13 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   selector: 'app-root',
   template: `
-    <header>
-      <nav>
-        <a routerLink="/">Inicio</a>
-        <a routerLink="/login">Iniciar Sesión</a>
-        <a routerLink="/register">Registrarse</a>
-      </nav>
-    </header>
+  <header>
+  <nav>
+    <a routerLink="/" routerLinkActive="active">Inicio</a>
+    <a routerLink="/login" routerLinkActive="active">Iniciar Sesión</a>
+    <a routerLink="/register" routerLinkActive="active">Registrarse</a>
+  </nav>
+</header>
     <main>
       <router-outlet></router-outlet>
     </main>
