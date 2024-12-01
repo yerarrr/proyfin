@@ -1,7 +1,6 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app.component';
-import { provideRouter, RouterModule } from '@angular/router';
-import { importProvidersFrom } from '@angular/core';
 import { LoginComponent } from './app/auth/login/login.component';
 import { RegisterComponent } from './app/auth/register/register.component';
 
