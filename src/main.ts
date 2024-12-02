@@ -6,7 +6,6 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 import { RouterModule} from '@angular/router';
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyBKGCeSi8thK0x1XWhEnnN-x4GBGa1B1ls",
   authDomain: "proyfin-50bf3.firebaseapp.com",
@@ -46,4 +45,3 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes),
   ],
 }).catch((err) => console.error(err));
-

@@ -1,40 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';  // Importa RouterModule
 
 @Component({
-  standalone: true,
   selector: 'app-root',
+  standalone: true,
   template: `
-  <header>
-  <nav>
-    <a routerLink="/" routerLinkActive="active">Inicio</a>
-    <a routerLink="/login" routerLinkActive="active">Iniciar Sesión</a>
-    <a routerLink="/register" routerLinkActive="active">Registrarse</a>
-  </nav>
-</header>
-    <main>
-      <router-outlet></router-outlet>
-    </main>
+    <header style="background-color: green; color: white; padding: 10px; text-align: center;">
+      <nav>
+        <a routerLink="/" routerLinkActive="active" style="margin: 0 15px;">Inicio</a>
+        <a routerLink="/login" routerLinkActive="active" style="margin: 0 15px;">Iniciar Sesión</a>
+        <a routerLink="/register" routerLinkActive="active" style="margin: 0 15px;">Registrarse</a>
+      </nav>
+    </header>
+
+    <router-outlet></router-outlet>  <!-- Aquí se cargarán los componentes según la ruta -->
   `,
-  styles: [
-    `
-      header {
-        background-color: #4caf50;
-        color: white;
-        padding: 1rem;
-        text-align: center;
-      }
-      nav a {
-        margin: 0 15px;
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-      }
-      main {
-        margin: 2rem;
-      }
-    `,
-  ],
-  imports: [RouterOutlet],
+  imports: [RouterModule],  // Asegúrate de incluir RouterModule aquí
 })
 export class AppComponent {}
