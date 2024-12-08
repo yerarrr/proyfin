@@ -1,12 +1,20 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { privateGuard, publicGuard } from './core/auth-guard';
 
-export const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: '**', redirectTo: '' },  // Redirige a Home si la ruta no existe
+export const routes: Routes = [
+  {
+    canActivateChild: [publicGuard()],
+    path: 'auth',
+    loadChildren: () => import('./auth/features/auth.routes'),
+  },
+  {
+    canActivateChild: [privateGuard()],
+    path: 'tasks',
+    loadComponent: () => import('./shared/ui/layout.component'),
+
+  },
+  {
+    path: '**',
+    redirectTo: '/tasks',
+  },
 ];
-
