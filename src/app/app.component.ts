@@ -7,6 +7,5 @@ import { NgxSonnerToaster } from 'ngx-sonner';
   standalone: true,
   imports: [RouterOutlet, NgxSonnerToaster],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
 export class AppComponent {}

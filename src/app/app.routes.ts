@@ -9,12 +9,12 @@ export const routes: Routes = [
   },
   {
     canActivateChild: [privateGuard()],
-    path: 'tasks',
+    path: '',
     loadComponent: () => import('./shared/ui/layout.component'),
 
   },
   {
     path: '**',
-    redirectTo: '/tasks',
+    redirectTo: '',
   },
 ];

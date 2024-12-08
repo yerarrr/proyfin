@@ -30,7 +30,7 @@ export const publicGuard = (): CanActivateFn => {
     return authState.authState$.pipe(
       map((state) => {
         if (state) {
-          router.navigateByUrl('/tasks');
+          router.navigateByUrl('');
           return false;
         }
 
